@@ -1,6 +1,6 @@
 {
   "name": "tb-vue-hash-router",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "A Vue hash-router-plugin",
   "keywords": [
     "Vue", "VueJS", "router", "hash", "hash-router", "disabled back button", "plugin"
@@ -23,7 +23,7 @@
   },
   "repository": {
     "type" : "git",
-    "url" : "https://github.com/tbalint19/tb-vue-hash-router"
+    "url" : "https://github.com/tbalint19/tb-vue-hash-router.git"
   },
   "repository": {},
   "devDependencies": {

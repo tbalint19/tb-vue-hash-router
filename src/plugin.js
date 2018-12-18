@@ -22,8 +22,11 @@ export default class HashRouterPlugin {
         if (!this.supportsHash()) {
           return result
         }
-        window.location.hash += window.location.hash.includes("?") ? "&" : "?"
-        window.location.hash += key + "=" + value
+        let newHash = window.location.hash
+        newHash += window.location.hash.includes("?") ? "&" : "?"
+        newHash += key + "=" + value
+        window.location.hash = "hash-router-navigation"
+        window.location.hash = newHash
       },
       updateQueryParams: function(newParams) {
         this.deleteQueryParams()
@@ -32,7 +35,9 @@ export default class HashRouterPlugin {
         }
       },
       deleteQueryParams: function() {
-        window.location.hash = window.location.hash.split("?")[0].substring(1)
+        let newHash = window.location.hash.split("?")[0].substring(1)
+        window.location.hash = "hash-router-navigation"
+        window.location.hash = newHash
       },
       deleteQueryParam: function(key) {
         let currentParams = this.parseQueryParams()
